@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <title>Subretinal fluid calculator</title>
+</head>
+
+<body>
+    <svg width="0" height="0">
+        <defs>
+            <filter id="neon-glow">
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <clipPath id="sector-mask" clipPathUnits="objectBoundingBox">
+                <!-- Сектор на 60 градусов (360/6) -->
+                <path d="M0.5 0.5 L0.5 0 A0.5 0.5 0 0 1 0.933 0.25 Z" />
+            </clipPath>
+        </defs>
+    </svg>
+
+    <div class="main-container">
+        <img src="img/logo.png" alt="logo" class="logo">
+        <h1 class="neon-title">Subretinal fluid calculator</h1>
+        <div class="calculator-wrapper">
+            <div class="eye-dial-container">
+                <img src="img/main_bg.jpg" alt="Eye" class="eye-image">
+                <div class="dial"></div>
+                <div class="input-modal">
+                    <input type="number" class="variable-input" placeholder="Value">
+                    <span class="unit-label">мм²</span>
+                    <button class="neon-button">SAVE</button>
+                </div>
+            </div>
+            <div class="display-container">
+                <div class="variables-display"></div>
+                <div class="button-result-container">
+                    <button class="calculate-btn neon-button">CALCULATE</button>
+                    <div class="result-display">Subretinal fluid volume: — мм³</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/core.js"></script>
+</body>
+
+</html>
