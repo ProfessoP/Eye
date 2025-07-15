@@ -67,7 +67,6 @@ body {
 
 .neon-title {
     font-size: 6vmin;
-    text-shadow: 0 0 1vmin var(--neon-blue);
     margin-bottom: 3vmin;
     letter-spacing: 0.5vmin;
     filter: url(#neon-glow);
@@ -76,7 +75,7 @@ body {
 
 @keyframes pulse {
     from {
-        opacity: 0.8;
+        opacity: 0.95;
     }
 
     to {
@@ -136,7 +135,6 @@ body {
     color: var(--neon-blue);
     transform: translate(-50%, -50%);
     z-index: 1;
-    text-shadow: 0 0 1vmin #000;
     font-weight: bold;
     filter: url(#neon-glow);
 }
